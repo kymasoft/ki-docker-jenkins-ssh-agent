@@ -13,13 +13,13 @@ help:
 build:
 	docker image build \
 		--file Dockerfile \
-		--tag 64gag/ki-jenkins-ssh-agent \
+		--tag kymasoft/ki-jenkins-ssh-agent \
 		.
 
 .PHONY: clean
 clean:
-	-docker image rm 64gag/ki-jenkins-ssh-agent
+	-docker image rm kymasoft/ki-jenkins-ssh-agent
 
 .PHONY: push
 push: build
-	docker push 64gag/ki-jenkins-ssh-agent:latest
+	docker image push kymasoft/ki-jenkins-ssh-agent:latest
