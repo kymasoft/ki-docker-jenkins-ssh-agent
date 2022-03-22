@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  s-app:
+    build:
+      dockerfile: Dockerfile
+    # NOTE: Set JEN_SSH_AG_PUB_KEY=VALUE (no quotes!) in a file named '.env' in the current directory
+    command: [ "$JEN_SSH_AG_PUB_KEY" ]
+    restart: always
+    ports:
+      - 2266:22
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
