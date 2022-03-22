@@ -1,6 +1,8 @@
 version: '3.6'
 services:
   s-app:
+    # NOTE: to use the pushed image...
+    #image: kymasoft/ki-jenkins-ssh-agent
     build:
       dockerfile: Dockerfile
     # NOTE: Set JEN_SSH_AG_PUB_KEY=VALUE (no quotes!) in a file named '.env' in the current directory
